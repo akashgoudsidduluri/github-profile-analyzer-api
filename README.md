@@ -41,18 +41,7 @@ The application fetches GitHub profile information for a given username, analyze
 
 ## Project Structure
 
-```text
-github-profile-analyzer-api/
-│
-├── index.js
-├── package.json
-├── .env
-├── README.md
-│
-└── database
-```
-
-Future scalable structure:
+The project follows a layered architecture using Routes, Controllers, Services, and Configuration modules to improve maintainability and scalability.
 
 ```text
 github-profile-analyzer-api/
@@ -186,7 +175,10 @@ POST /analyze/torvalds
 
 ```json
 {
-    "message": "Profile stored successfully"
+    {
+    "message": "Profile stored successfully",
+    "username": "torvalds"
+    }
 }
 ```
 
@@ -284,6 +276,13 @@ MySQL Storage
 API Response
 ```
 
+## Submission
+
+GitHub Repository:
+<repo-link>
+
+Live API:
+<deployment-link>
 ---
 
 ## References
@@ -311,8 +310,7 @@ https://nodejs.org/en/docs
 ---
 
 ## Future Improvements
-
-* Update existing profiles instead of duplicate insertion errors
+* Add repository language statistics
 * Add profile popularity score
 * Add account age analysis
 * Add developer level classification
